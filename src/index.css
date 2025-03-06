@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #20242d;
+  font-family: "Popins", sans-serif;
+  font-weight: 800;
+}
+
+h1,
+span {
+  -webkit-background-clip: text;
+  color: transparent;
+}
