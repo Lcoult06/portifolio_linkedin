@@ -3,23 +3,26 @@ import scrollicon from "../../assets/images/scroll.png";
 import herobanner from "../../assets/images/hero-banner.png";
 import { motion } from "framer-motion";
 
-const textVariants = {
-  initial: { x: -500, opacity: 0 },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 1, staggerChildren: 0.1 },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: { duration: 2, repeat: Infinity },
-  },
-};
+// const textVariants = {
+//   initial: { x: -500, opacity: 0 },
+//   animate: {
+//     x: 0,
+//     opacity: 1,
+//     transition: { duration: 1, staggerChildren: 0.1 },
+//   },
+//   scrollButton: {
+//     opacity: 0,
+//     y: 10,
+//     transition: { duration: 2, repeat: Infinity },
+//   },
+// };
 
 const Hero = () => {
   return (
-    <div className="max-w-[1240px] mx-auto  flex flex-col-reverse sm:flex-row justify-center items-center px-4 sm:px-8">
+    <div
+      className="w-full min-h-screen max-w-[1240px] mx-auto  flex flex-col-reverse sm:flex-row justify-center items-center px-4 sm:px-8"
+      id="home"
+    >
       {/* Texto e Botões */}
       <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-6">
         <h1 className="text-2xl sm:text-3xl md:text-6xl mt-4 font-bold bg-gradient-to-r from-blue-600 to-purple-500">
@@ -31,9 +34,27 @@ const Hero = () => {
 
         {/* Ícones Redes Sociais */}
         <div className="text-4xl flex gap-8 text-white">
-          <FaLinkedin className="hover:text-blue-500 transition-colors" />
-          <FaGithub className="hover:text-gray-500 transition-colors" />
-          <FaWhatsapp className="hover:text-green-500 transition-colors" />
+          <a
+            href="https://www.linkedin.com/in/leonardo-f-coutinho"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="hover:text-blue-500 transition-colors" />
+          </a>
+          <a
+            href="https://github.com/Lcoult06"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="hover:text-gray-500 transition-colors" />
+          </a>
+          <a
+            href="https://wa.me/5532984695201"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp className="hover:text-green-500 transition-colors" />
+          </a>
         </div>
 
         {/* Botão de Download */}

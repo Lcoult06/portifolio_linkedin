@@ -10,80 +10,92 @@ const Navbar = () => {
   };
 
   return (
-    <div className="text-gray-500 flex justify-between items-center max-w-[1240px] mx-auto h-24 px-4 text-1">
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        className="flex items-center gap-2 group"
-      >
-        <div className="relative h-8 w-8 rounded-full overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-500 animate-spin [mask-image:linear-gradient(transparent,white)]" />
-          <div className="absolute inset-[2px] bg-black rounded-full flex items-center justify-center">
-            <span className="font-bold bg-gradient-to-r from-blue-600 to-purple-500 ">
-              LC
-            </span>
-          </div>
-        </div>
-        <h1 className="font-semibold bg-gradient-to-r from-blue-600 to-purple-500">
-          Leonardo Coutinho
-        </h1>
-      </motion.div>
-      <ul className="hidden md:flex">
-        <li className="p-2 text-base">
-          <a href="#">Home</a>
-        </li>
-        <li className="p-2 text-base">
-          <a href="#">Sobre</a>
-        </li>
-        <li className="p-2 text-base">
-          <a href="#">Projetos</a>
-        </li>
-        <li className="p-2 text-base">
-          <a href="#">Contatos</a>
-        </li>
-      </ul>
-      <div onClick={handleNav} className="block md:hidden">
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-      </div>
-
-      <div
-        className={
-          nav
-            ? "z-10 text-gray-500 fixed h-full left-0 top-0 w-[60%] border-r border-r-gray-900 bg-[#121922] ease-in-out duration-500"
-            : "fixed left-[-100%]"
-        }
-      >
+    <nav className="fixed top-0 left-0 w-full bg-[#121922] text-gray-500 z-50 shadow-md">
+      <div className="flex justify-between items-center max-w-[1240px] mx-auto h-20 px-4">
+        {/* Logo */}
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="flex items-center gap-2 group p-8"
+          className="flex items-center gap-2"
         >
-          <div className="relative h-8 w-8 rounded-full overflow-hidden ">
+          <div className="relative h-8 w-8 rounded-full overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-500 animate-spin [mask-image:linear-gradient(transparent,white)]" />
             <div className="absolute inset-[2px] bg-black rounded-full flex items-center justify-center">
-              <span className="font-bold bg-gradient-to-r from-blue-600 to-purple-500 ">
+              <span className="font-bold bg-gradient-to-r from-blue-600 to-purple-500">
                 LC
               </span>
             </div>
           </div>
+          <h1 className="font-semibold bg-gradient-to-r from-blue-600 to-purple-500">
+            Leonardo Coutinho
+          </h1>
         </motion.div>
-        <ul className="p-8 text-2xl">
+
+        {/* Links desktop */}
+        <ul className="hidden md:flex space-x-6">
           <li className="p-2 text-base">
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li className="p-2 text-base">
-            <a href="#">Sobre</a>
+            <a href="#about">Sobre</a>
           </li>
           <li className="p-2 text-base">
-            <a href="#">Tecnologias</a>
+            <a href="#project">Projetos</a>
           </li>
           <li className="p-2 text-base">
-            <a href="#">Projetos</a>
-          </li>
-          <li className="p-2 text-base">
-            <a href="#">Contatos</a>
+            <a href="#contact">Contatos</a>
           </li>
         </ul>
+
+        {/* Ícone Menu Mobile */}
+        <div onClick={handleNav} className="block md:hidden cursor-pointer">
+          {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+        </div>
+
+        {/* Menu Mobile */}
+        <div
+          className={`fixed left-0 top-0 h-screen w-[60%] bg-[#121922] border-r border-gray-900 p-8 transform ${
+            nav ? "translate-x-0" : "-translate-x-full"
+          } transition-transform duration-300 ease-in-out`}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center gap-2"
+          >
+            <div className="relative h-8 w-8 rounded-full overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-500 animate-spin [mask-image:linear-gradient(transparent,white)]" />
+              <div className="absolute inset-[2px] bg-black rounded-full flex items-center justify-center">
+                <span className="font-bold bg-gradient-to-r from-blue-600 to-purple-500">
+                  LC
+                </span>
+              </div>
+            </div>
+          </motion.div>
+
+          <ul className="mt-8 space-y-4 text-lg">
+            <li>
+              <a href="#home" onClick={handleNav}>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" onClick={handleNav}>
+                Sobre
+              </a>
+            </li>
+            <li>
+              <a href="#project" onClick={handleNav}>
+                Projetos
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onClick={handleNav}>
+                Contatos
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
