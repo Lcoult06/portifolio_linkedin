@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaDownload, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import scrollicon from "../../assets/images/scroll.png";
 import herobanner from "../../assets/images/hero-banner.png";
 import { motion } from "framer-motion";
@@ -19,10 +19,10 @@ const textVariants = {
 
 const Hero = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col-reverse sm:flex-row justify-center items-center px-4 sm:px-8">
+    <div className="max-w-[1240px] mx-auto  flex flex-col-reverse sm:flex-row justify-center items-center px-4 sm:px-8">
       {/* Texto e Botões */}
       <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-6">
-        <h1 className="text-2xl sm:text-3xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-500">
+        <h1 className="text-2xl sm:text-3xl md:text-6xl mt-4 font-bold bg-gradient-to-r from-blue-600 to-purple-500">
           Olá! Sou Leonardo Coutinho
         </h1>
         <h1 className="text-3xl sm:text-4xl md:text-7xl font-bold text-white">
@@ -37,8 +37,9 @@ const Hero = () => {
         </div>
 
         {/* Botão de Download */}
-        <motion.button className="px-6 py-3 mt-10 bg-gradient-to-r from-blue-600 to-purple-500 text-white hover:scale-110 transition-transform duration-300 ease-in-out rounded-lg">
+        <motion.button className="flex items-center px-6 py-3 mt-10 bg-gradient-to-r from-blue-600 to-purple-500 text-white hover:scale-110 transition-transform duration-300 ease-in-out rounded-lg">
           Download CV
+          <FaDownload className="ml-2" />
         </motion.button>
 
         {/* Ícone de Scroll */}

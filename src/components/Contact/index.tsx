@@ -1,16 +1,16 @@
 const Contact = () => {
   return (
-    <div className="flex justify-center my-5 h-full sm:h-[70vh] items-center">
-      <div className="max-w-[1200px] mx-auto">
+    <div className="w-full min-h-screen flex justify-center my-5 h-full sm:h-[70vh] items-center">
+      <div className="max-w-[1240px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Seção de Contatos */}
-          <div className="p-6 mr-2 bg-gray-800 rounded-xl flex flex-col justify-around">
-            <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-500">
+          <div className="p-6 mr-2 bg-gray-800 rounded-xl flex flex-col  justify-around">
+            <h1 className="text-4xl sm:text-5xl  font-bold bg-gradient-to-r from-blue-600 to-purple-500">
               Meus Contatos
             </h1>
 
             <div className="space-y-4 text-gray-400">
-              <p className="text-lg text-gray-400 ">📬 Entre em Contato</p>
+              <p className="text-lg text-gray-400 mt-5">📬 Entre em Contato</p>
               {/* E-mail */}
               <div className="flex items-center">
                 <svg
@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
 
           {/* Formulário de Contato */}
-          <form className="p-6 flex flex-col justify-center max-w-[700px] bg-gray-800 rounded-xl">
+          <form className="p-6 flex flex-col  max-w-[700px] bg-gray-800 rounded-xp-6 mr-2 rounded-xl  justify-around">
             <div className="flex flex-col">
               <label htmlFor="name" className="text-gray-400 text-sm mb-1">
                 Nome Completo

@@ -35,9 +35,6 @@ const Navbar = () => {
           <a href="#">Sobre</a>
         </li>
         <li className="p-2 text-base">
-          <a href="#">Tecnologias</a>
-        </li>
-        <li className="p-2 text-base">
           <a href="#">Projetos</a>
         </li>
         <li className="p-2 text-base">
