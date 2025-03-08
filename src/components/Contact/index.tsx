@@ -5,7 +5,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Seção de Contatos */}
           <div className="p-6 mr-2 bg-gray-800 rounded-xl flex flex-col justify-around">
-            <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-500  ">
+            <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-500">
               Meus Contatos
             </h1>
 
@@ -30,7 +30,7 @@ const Contact = () => {
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
                 <p className="ml-4 text-md tracking-wide font-semibold">
-                  coutinhofleonardo@gmail.com
+                  coutinhofleonardo98@gmail.com
                 </p>
               </div>
 

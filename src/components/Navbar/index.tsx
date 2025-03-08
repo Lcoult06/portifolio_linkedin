@@ -23,7 +23,7 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <h1 className="font-semibold bg-gradient-to-r from-blue-600 to-purple-500 ">
+        <h1 className="font-semibold bg-gradient-to-r from-blue-600 to-purple-500">
           Leonardo Coutinho
         </h1>
       </motion.div>
