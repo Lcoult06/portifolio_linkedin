@@ -1,8 +1,8 @@
-import project1 from "../../assets/images/project-1.jpg";
-import project2 from "../../assets/images/project-1.jpg";
-import project4 from "../../assets/images/project-1.jpg";
-import project5 from "../../assets/images/project-1.jpg";
-import project6 from "../../assets/images/project-1.jpg";
+import project1 from "../../assets/images2/CloneSpotify.png";
+import project2 from "../../assets/images2/efood.png";
+import project3 from "../../assets/images2/eplay.png";
+import project4 from "../../assets/images2/clonedisney.png";
+import project5 from "../../assets/images2/sorteador.png";
 
 import { AiOutlineGithub } from "react-icons/ai";
 import { MdPreview } from "react-icons/md";
@@ -10,48 +10,67 @@ import { MdPreview } from "react-icons/md";
 const portifolio = [
   {
     img: project1,
-    title: "Project #1",
-    description: "UI for frontend development using React.",
+    title: "Clone do Spotify #1",
+    description:
+      "Réplica simplificada do Spotify, utilizando React no frontend, Node.js com Express no backend e MongoDB como banco de dados.",
     links: {
-      site: "#",
-      github: "#",
+      site: { url: "#", target: "_blank" },
+      github: {
+        url: "https://github.com/Lcoult06/Projeto_Spotify",
+        target: "_blank",
+      },
     },
   },
   {
     img: project2,
-    title: "Project #2",
-    description: "A fullstack application built with Node.js and MongoDB.",
+    title: "Efood - E-commerce  #2",
+    description:
+      "Loja virtual em React com validação de formulários, menu responsivo, integração com APIs e loaders personalizados. O projeto inclui otimizações no código, validação do carrinho e boas práticas de desenvolvimento. ",
     links: {
-      site: "#",
-      github: "#",
+      site: { url: "https://projeto6-ten.vercel.app/", target: "_blank" },
+      github: {
+        url: "https://github.com/Lcoult06/Projeto6-EFOOD",
+        target: "_blank",
+      },
+    },
+  },
+  {
+    img: project3,
+    title: "Eplay - E-commerce #3",
+    description:
+      "Loja virtual em React com validação de formulários, menu responsivo, integração com APIs e loaders personalizados. O projeto inclui otimizações no código, validação do carrinho e boas práticas de desenvolvimento. ",
+    links: {
+      site: { url: "https://eplay-one.vercel.app/", target: "_blank" },
+      github: { url: "https://github.com/Lcoult06/eplay", target: "_blank" },
     },
   },
   {
     img: project4,
-    title: "Project #3",
-    description: "An e-commerce platform with various features.",
+    title: "Clone Disney - Tema Iron Man  #4",
+    description:
+      "Desenvolvi um clone da Disney aplicando HTML, CSS e JavaScript, com foco em responsividade e interatividade. O projeto inclui uma seção de atrações, listagem de planos, FAQ interativo e um rodapé estilizado, seguindo boas práticas de design.",
     links: {
-      site: "#",
-      github: "#",
+      site: {
+        url: "https://projeto-landing-page-eight.vercel.app/",
+        target: "_blank",
+      },
+      github: {
+        url: "https://github.com/Lcoult06/Projeto4_clonedisney_tema_ironman",
+        target: "_blank",
+      },
     },
   },
   {
     img: project5,
-    title: "Project #4",
-    description: "A mobile-friendly application using React Native.",
-    links: {
-      site: "#",
-      github: "#",
-    },
-  },
-  {
-    img: project6,
-    title: "Project #5",
+    title: "Sorteador Automático #5",
     description:
-      "A data visualization project using D3.js and other libraries.",
+      "Este projeto consiste em um sorteador de números desenvolvido com HTML, CSS e JavaScript, utilizando o Grunt para automação de tarefas.",
     links: {
-      site: "#",
-      github: "#",
+      site: { url: "https://sorteadorgruntleo.vercel.app/", target: "_blank" },
+      github: {
+        url: "https://github.com/Lcoult06/sorteador_grunt",
+        target: "_blank",
+      },
     },
   },
 ];
@@ -62,7 +81,7 @@ const Projects = () => {
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-700 mb-4">
         Meus projetos
       </h2>
-      {portifolio.map((portifolio, index) => (
+      {portifolio.map((project, index) => (
         <div
           key={index}
           className={`flex flex-col md:flex-row ${
@@ -71,28 +90,28 @@ const Projects = () => {
         >
           <div className="w-full md:w-1/2 p-4">
             <img
-              src={portifolio.img}
-              alt={portifolio.title}
+              src={project.img}
+              alt={project.title}
               className="w-full h-full object-cover rounded-lg shadow-lg"
             />
           </div>
           <div className="w-full md:w-1/2 p-4 flex flex-col justify-center">
             <h3 className="text-2xl font-semibold text-gray-300 mb-4">
-              {portifolio.title}
+              {project.title}
             </h3>
-            <p className="text-gray-500 mb-4">{portifolio.description}</p>
+            <p className="text-gray-500 mb-4">{project.description}</p>
             <div className="flex space-x-4">
               <a
-                href={portifolio.links.site}
-                className="px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700
-                                        transition duration-300"
+                href={project.links.site.url}
+                target={project.links.site.target} // Adicionando target="_blank"
+                className="px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition duration-300"
               >
                 <MdPreview className="size-6" />
               </a>
               <a
-                href={portifolio.links.github}
-                className="px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700
-                                        transition duration-300"
+                href={project.links.github.url}
+                target={project.links.github.target} // Adicionando target="_blank"
+                className="px-4 py-2 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition duration-300"
               >
                 <AiOutlineGithub className="size-6" />
               </a>

@@ -1,4 +1,4 @@
-import userimage from "../../assets/images/user-image.png"; // Substitua pelo caminho correto da imagem
+import userimage from "../../assets/images2/userimage.png"; // Substitua pelo caminho correto da imagem
 
 const About = () => {
   return (
@@ -10,8 +10,8 @@ const About = () => {
         {/* Imagem */}
         <img
           src={userimage}
-          width={200}
-          height={200}
+          width={400}
+          height={400}
           alt="About Me Image"
           className="max-w-xs sm:max-w-md md:max-w-lg h-auto rounded-lg mx-auto"
         />
@@ -21,21 +21,47 @@ const About = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-500 mb-4">
             Sobre mim
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-400 mx-auto max-w-3xl">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 mx-auto max-w-3xl leading-relaxed text-left">
+            Olá! Eu sou o{" "}
+            <span className="font-semibold text-white">Leonardo Coutinho</span>{" "}
+            👋
+            <br />
+            <br />
+            Sou{" "}
+            <span className="font-semibold text-white">
+              Desenvolvedor Front-End
+            </span>
+            , apaixonado por tecnologia e sempre em busca de novos desafios.
+            Formado em{" "}
+            <span className="font-semibold text-white">Administração</span> pela
+            Unopar, atualmente estou me especializando em{" "}
+            <span className="font-semibold text-white">
+              Desenvolvimento Full Stack Java
+            </span>{" "}
+            pela EBAC.
+            <br />
+            <br />
+            No momento, estou aprofundando meus conhecimentos em{" "}
+            <span className="font-semibold text-white">Back-End</span>, com o
+            objetivo de me tornar um{" "}
+            <span className="font-semibold text-white">
+              Desenvolvedor Full Stack
+            </span>
+            .
+            <br />
+            <br />
+            Tenho experiência em{" "}
+            <span className="font-semibold text-white">
+              React, JavaScript, HTML e CSS
+            </span>
+            , criando interfaces modernas, responsivas e integradas a APIs.
+            Sempre aplico boas práticas, como otimização de performance e
+            padronização de código.
+            <br />
+            <br />
+            Estou em constante aprendizado e aberto a novas oportunidades.
+            Explore meus projetos e conheça mais sobre meu trabalho! 🚀
           </p>
-          {/* Botões de Aba */}
-          <div className="flex flex-row justify-start mt-8 space-x-4">
-            <button></button>
-          </div>
-
-          {/* Conteúdo da Aba Ativa */}
-          <div className="mt-8"></div>
         </div>
       </div>
     </section>

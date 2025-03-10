@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <About />
         <Projects />
         <Contact />
+        <ScrollToTop />
         <Footer />
       </div>
     </>
