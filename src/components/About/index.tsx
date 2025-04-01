@@ -1,9 +1,9 @@
-import userimage from "../../assets/images2/userimage.png"; // Substitua pelo caminho correto da imagem
+import userimage from "../../assets/images/userimage.png"; // Substitua pelo caminho correto da imagem
 
 const About = () => {
   return (
     <section
-      className="w-full min-h-screen max-w-[1240px] flex justify-center my-5  h-full sm:h-[70vh] items-center"
+      className="w-full min-h-screen max-w-[1240px] mx-auto  flex flex-col-reverse sm:flex-row justify-center items-center px-4 sm:px-8"
       id="about"
     >
       <div className="md:grid md:grid-cols-2 items-center py-4  xl:gap-3 sm:py-16 xl:px-15">

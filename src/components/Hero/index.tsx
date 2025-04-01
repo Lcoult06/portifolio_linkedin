@@ -1,6 +1,6 @@
 import { FaDownload, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import scrollicon from "../../assets/images/scroll.png";
-import herobanner from "../../assets/images/hero-banner.png";
+import herobanner from "../../assets/images/heroimg.jpg";
 
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
@@ -98,7 +98,7 @@ const Hero = () => {
         className="my-auto flex justify-center"
       >
         <img
-          className="w-[80%] max-w-xs sm:max-w-md md:max-w-lg h-auto"
+          className="w-[90%] max-w-xs sm:max-w-md md:max-w-lg h-auto"
           src={herobanner}
           alt="Imagem Leonardo Coutinho"
         />

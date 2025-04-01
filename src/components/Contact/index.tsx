@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="max-w-[1240px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Seção de Contatos */}
-          <div className="p-6 bg-gray-800 rounded-xl flex flex-col justify-around">
+          <div className="p-24 bg-gray-800 rounded-xl flex flex-col justify-around">
             <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-500">
               Meus Contatos
             </h1>

@@ -1,9 +1,11 @@
-import project1 from "../../assets/images2/CloneSpotify.png";
-import project2 from "../../assets/images2/efood.png";
-import project3 from "../../assets/images2/eplay.png";
-import project4 from "../../assets/images2/clonedisney.png";
-import project5 from "../../assets/images2/sorteador.png";
+//
 
+import React, { useState } from "react";
+import project1 from "../../assets/images/CloneSpotify.png";
+import project2 from "../../assets/images/efood.png";
+import project3 from "../../assets/images/eplay.png";
+import project4 from "../../assets/images/clonedisney.png";
+import project5 from "../../assets/images/sorteador.png";
 import { AiOutlineGithub } from "react-icons/ai";
 import { MdPreview } from "react-icons/md";
 
@@ -76,12 +78,35 @@ const portifolio = [
 ];
 
 const Projects = () => {
+  const projectsPerPage = 2; // Defina quantos projetos por página você deseja exibir
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Calcula o índice inicial e final dos projetos a serem exibidos
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = portifolio.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  const handleNextPage = () => {
+    if (currentPage < Math.ceil(portifolio.length / projectsPerPage)) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   return (
     <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="project">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-700 mb-4">
         Meus projetos
       </h2>
-      {portifolio.map((project, index) => (
+      {currentProjects.map((project, index) => (
         <div
           key={index}
           className={`flex flex-col md:flex-row ${
@@ -119,6 +144,26 @@ const Projects = () => {
           </div>
         </div>
       ))}
+
+      {/* Botões de navegação */}
+      <div className="flex justify-between mt-8">
+        <button
+          onClick={handlePrevPage}
+          className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-500 text-white rounded-lg transition duration-300"
+          disabled={currentPage === 1}
+        >
+          Anterior
+        </button>
+        <button
+          onClick={handleNextPage}
+          className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-500 text-white rounded-lg transition duration-300"
+          disabled={
+            currentPage === Math.ceil(portifolio.length / projectsPerPage)
+          }
+        >
+          Próximo
+        </button>
+      </div>
     </div>
   );
 };
