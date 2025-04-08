@@ -87,7 +87,11 @@ const Contact = () => {
           </div>
 
           {/* Formulário de Contato */}
-          <form className="p-6 flex flex-col max-w-[700px] bg-gray-800 rounded-xl">
+          <form
+            action="https://getform.io/f/bjjmvjyb"
+            method="POST"
+            className="p-6 flex flex-col max-w-[700px] bg-gray-800 rounded-xl"
+          >
             <div className="flex flex-col">
               <label htmlFor="name" className="text-gray-400 text-sm mb-1">
                 Nome Completo

@@ -1,6 +1,3 @@
-//
-
-import React, { useState } from "react";
 import project1 from "../../assets/images/CloneSpotify.png";
 import project2 from "../../assets/images/efood.png";
 import project3 from "../../assets/images/eplay.png";
@@ -8,6 +5,7 @@ import project4 from "../../assets/images/clonedisney.png";
 import project5 from "../../assets/images/sorteador.png";
 import { AiOutlineGithub } from "react-icons/ai";
 import { MdPreview } from "react-icons/md";
+import { useState } from "react";
 
 const portifolio = [
   {
@@ -78,10 +76,9 @@ const portifolio = [
 ];
 
 const Projects = () => {
-  const projectsPerPage = 2; // Defina quantos projetos por página você deseja exibir
+  const projectsPerPage = 2;
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Calcula o índice inicial e final dos projetos a serem exibidos
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = portifolio.slice(
