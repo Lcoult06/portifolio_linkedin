@@ -18,7 +18,8 @@ const Contact = () => {
               {/* E-mail */}
               <div className="flex items-center gap-3">
                 <a
-                  href="mailto:coutinhofleonardo98@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&to=coutinhofleonardo98@gmail.com"
+                  target="_blank"
                   className="flex items-center hover:text-white transition"
                 >
                   <svg
